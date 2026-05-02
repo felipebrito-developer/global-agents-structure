@@ -1,0 +1,27 @@
+{
+  "_comment": "Copy to your project as .agents/skills-lock.json. Add project-specific skills to optional[].",
+  "required": [
+    "context7",
+    "security-best-practices"
+  ],
+  "optional": [
+    "_comment_optional": "Add any of these based on your stack",
+    "nodejs-backend-patterns",
+    "zod",
+    "drizzle-orm",
+    "sqlite-database-expert",
+    "ui-component-patterns",
+    "jotai-expert",
+    "tanstack-start-best-practices",
+    "react-native-best-practices",
+    "vercel-react-native-skills",
+    "react-native-design",
+    "mobile-android-design",
+    "mobile-offline-support",
+    "upgrading-react-native",
+    "adhd-design-expert",
+    "claude-api",
+    "mcp-builder",
+    "validate-skills"
+  ]
+}

@@ -1,0 +1,18 @@
+# ~/.agents boilerplate .gitignore
+
+# Private MCP server implementations (project-specific, never share)
+mcp/
+
+# Local project overrides (contain project-specific secrets/paths)
+# Each project manages its own .agents/ — don't commit those from here
+*.local.json
+
+# Node artifacts from scripts/
+scripts/node_modules/
+scripts/.cache/
+
+# OS artifacts
+.DS_Store
+Thumbs.db
+*.swp
+*.swo

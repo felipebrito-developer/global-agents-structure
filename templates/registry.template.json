@@ -1,0 +1,78 @@
+{
+  "_version": "registry/v1",
+  "project": {
+    "name": "YOUR_PROJECT_NAME",
+    "description": "Short description of what this project does",
+    "root": ".",
+    "packageManager": "bun",
+    "testRunner": "bun:test",
+    "linter": "bun biome check --write ."
+  },
+  "workspaces": {
+    "_comment": "Only include workspaces that exist in your project. Delete unused entries.",
+    "shared": {
+      "path": "packages/shared/",
+      "specialist": "agent-shared-type-architect"
+    },
+    "backend": {
+      "path": "apps/service/",
+      "specialist": "agent-be-architect"
+    },
+    "web": {
+      "path": "apps/web/",
+      "type": "web",
+      "specialist": "agent-web-architect",
+      "config": {
+        "framework": "react"
+      }
+    },
+    "mobile": {
+      "path": "apps/mobile/",
+      "type": "mobile",
+      "specialist": "agent-mobile-architect",
+      "config": {
+        "framework": "react-native",
+        "version": "0.78"
+      }
+    },
+    "ai": {
+      "path": "apps/ai-bridge/",
+      "specialist": "agent-ai-bridge-specialist",
+      "config": {
+        "localProvider": "ollama",
+        "localProviderUrl": "http://localhost:11434",
+        "cloudProvider": "gemini"
+      }
+    },
+    "docs": {
+      "path": "docs/",
+      "specialist": "agent-doc-updater"
+    }
+  },
+  "git": {
+    "protectedBranches": ["main", "master", "production", "release/*"],
+    "defaultBase": "main",
+    "branchNamingPattern": "<type>/<description>",
+    "commitStyle": "conventional-commits",
+    "requireLinkedIssue": false,
+    "hostCli": "gh",
+    "prTemplate": ".github/pull_request_template.md"
+  },
+  "permissions": {
+    "agent-file-manager": {
+      "allowedRoots": [".", ".agents/"],
+      "lintCommand": "bun biome check --write ."
+    },
+    "agent-qa-specialist": {
+      "writeAccess": ["**/*.spec.ts", "**/*.test.ts", "e2e/**", "__tests__/**", "test-plans/**"]
+    },
+    "agent-test-runner": {
+      "functionalCommand": "bun test",
+      "regressionCommand": "bun test --coverage",
+      "e2eCommand": "bunx playwright test",
+      "smokeTag": "--grep @smoke",
+      "requireCleanWorkingTree": false,
+      "coverageThreshold": 80
+    }
+  }
+}

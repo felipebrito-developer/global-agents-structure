@@ -1,0 +1,14 @@
+{
+  "name": "@agents/scripts",
+  "version": "1.0.0",
+  "description": "CLI utilities for bootstrapping and validating .agents project configurations",
+  "type": "module",
+  "scripts": {
+    "init": "node init-project.js",
+    "validate": "node validate-registry.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {}
+}

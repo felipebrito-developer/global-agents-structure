@@ -1,0 +1,19 @@
+{
+  "version": "1.0.0",
+  "name": "agents-boilerplate",
+  "description": "Project-agnostic multi-specialist AI agent orchestration system",
+  "author": "felip",
+  "license": "MIT",
+  "globals": {
+    "defaultPackageManager": "bun",
+    "defaultTestRunner": "bun:test",
+    "defaultLinter": "bun biome check --write .",
+    "baseSkills": ["context7", "security-best-practices"],
+    "protectedBranches": ["main", "master", "production", "release/*"]
+  },
+  "personasDir": "./personas",
+  "docsDir": "./docs",
+  "scriptsDir": "./scripts",
+  "skillsDir": "./skills",
+  "templatesDir": "./templates"
+}
