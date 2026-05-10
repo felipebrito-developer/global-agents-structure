@@ -1,11 +1,9 @@
 {
-  "_comment": "Copy to your project as .agents/skills-lock.json. Add project-specific skills to optional[].",
   "required": [
     "context7",
     "security-best-practices"
   ],
   "optional": [
-    "_comment_optional": "Add any of these based on your stack",
     "nodejs-backend-patterns",
     "zod",
     "drizzle-orm",
